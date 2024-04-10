@@ -1,0 +1,49 @@
+{
+  "project_info": {
+    "project_number": "77511315516",
+    "firebase_url": "https://fyp-portal-bf570-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "fyp-portal-bf570",
+    "storage_bucket": "fyp-portal-bf570.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:77511315516:android:8eb63ed09443e624f87339",
+        "android_client_info": {
+          "package_name": "com.tkll.fyp_portal"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB14MIYAlNvAXKlgr9HFIc7yvbucISadpc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:77511315516:android:3f35612d17f73301f87339",
+        "android_client_info": {
+          "package_name": "my.edu.utar.assignment"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB14MIYAlNvAXKlgr9HFIc7yvbucISadpc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
