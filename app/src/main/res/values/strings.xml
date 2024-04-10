@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">FYP Portal</string>
+    <string name="welcome_info">The Final Year Project (FYP) encourages students to bring together their discoveries as a single piece of work and to demonstrate their competency in applying what they have learnt throughout their studies. Students are encouraged to innovate, research and test their hypothesis,
+        and present in their work, their knowledge and expertise in disciplines other than what they have learnt.
+        The project work presents students the opportunity to advance their ideas, and pursue their interests to postgraduate research problem formulation, development-tool selection, research method identification, project planning, proposal writing, presentation, in order to commence their final year projects.
+        \n\nEvery student undertaking the degree is required to complete a FYP under the supervision of a FICT academic staff. In the case that the FYP is derived from an industrial problem, an external co-supervisor from the industry may be appointed, subject to the approval from the Faculty.\n\nThe whole FYP is divided into three parts,
+        namely Introduction To Inventive Problem Solving And Proposal Writing (IIPSPW), Project I and Project II. Once the student accumulated 54 credit hours, the student can start to take the IIPSPW course. Each student is required to meet the supervisor minimum once in two weeks for long trimester
+        (bi-weekly meeting) and once in a week for short trimester (weekly meeting).</string>
 </resources>
