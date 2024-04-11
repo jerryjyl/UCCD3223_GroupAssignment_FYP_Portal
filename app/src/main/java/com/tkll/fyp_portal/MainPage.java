@@ -15,7 +15,7 @@ public class MainPage extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View rootView = inflater.inflate(R.layout.activity_main, container, false);
+        View rootView = inflater.inflate(R.layout.fragment_main_page, container, false);
 
         TextView introTextView = rootView.findViewById(R.id.textViewIntro);
         TextView introCollapseButton = rootView.findViewById(R.id.introCollapseBtn);

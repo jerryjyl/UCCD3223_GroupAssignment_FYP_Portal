@@ -5,20 +5,23 @@
 
     <group android:checkableBehavior="single">
         <item android:id="@+id/nav_home"
+            android:icon="@drawable/ic_notices"
             android:title="Notices"/>
 
         <item android:id="@+id/nav_iipspw"
+            android:icon="@drawable/ic_assignment"
             android:title="IIPSPW"/>
 
         <item android:id="@+id/nav_fyp"
+            android:icon="@drawable/ic_assignment"
             android:title="FYP"/>
     </group>
 
-    <item android:title="">
+    <item android:title="Exit from app">
         <menu>
             <item android:id="@+id/nav_logout"
+                android:icon="@drawable/ic_exit"
                 android:title="Logout"/>
         </menu>
     </item>
-
 </menu>
