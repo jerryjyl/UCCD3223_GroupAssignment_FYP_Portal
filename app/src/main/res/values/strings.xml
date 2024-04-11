@@ -8,4 +8,6 @@
         (bi-weekly meeting) and once in a week for short trimester (weekly meeting).</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="open_navigation">Enable navigation</string>
+    <string name="close_navigation">Disable navigation</string>
 </resources>
