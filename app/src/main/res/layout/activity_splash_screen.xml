@@ -12,46 +12,56 @@
 
     <com.airbnb.lottie.LottieAnimationView
         android:id="@+id/lottie"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="20dp"
+        android:layout_width="300dp"
+        android:layout_height="370dp"
+        android:layout_marginTop="50dp"
+        android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/splashscr_verticalright088"
+        app:layout_constraintStart_toStartOf="@+id/splashscr_verticalleft012"
+        app:layout_constraintTop_toTopOf="@+id/splashscr_horizontaltop002"
         app:lottie_autoPlay="true"
         app:lottie_loop="true"
-        app:lottie_rawRes="@raw/animation"
-        android:visibility="invisible"/>
+        app:lottie_rawRes="@raw/animation" />
 
-    <TextView
-        android:id="@+id/appname_fyp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/paul"
-        android:gravity="center"
-        android:text="FYP"
-        android:textColor="@color/white"
-        android:textSize="170sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.499" />
 
-    <TextView
-        android:id="@+id/appname_portal"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/appname_group"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="-18dp"
-        android:layout_marginRight="70dp"
-        android:fontFamily="@font/cabal_bold"
-        android:text="Portal"
-        android:textColor="@color/white"
-        android:textSize="40sp"
-        app:layout_constraintEnd_toEndOf="@+id/appname_fyp"
-        app:layout_constraintTop_toBottomOf="@+id/appname_fyp" />
+        app:layout_constraintBottom_toTopOf="@+id/splashscr_horizontalbottom098"
+        app:layout_constraintEnd_toStartOf="@+id/splashscr_verticalright088"
+        app:layout_constraintStart_toStartOf="@+id/splashscr_verticalleft012"
+        app:layout_constraintTop_toTopOf="@+id/splashscr_horizontaltop002">
+
+        <TextView
+            android:id="@+id/appname_fyp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/paul"
+            android:gravity="center"
+            android:text="FYP"
+            android:textColor="@color/white"
+            android:textSize="170sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.499" />
+
+        <TextView
+            android:id="@+id/appname_portal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="-18dp"
+            android:fontFamily="@font/cabal_bold"
+            android:text="Portal"
+            android:textColor="@color/white"
+            android:textSize="40sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/appname_fyp" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
     <ProgressBar
         android:id="@+id/progressbar"
@@ -59,15 +69,61 @@
         android:layout_width="270dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
+        android:layout_marginTop="10dp"
         android:progressDrawable="@drawable/progressbar"
         android:scaleY="1"
         android:theme="@style/ProgressBarStyle"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.514"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/lottie"
-        app:layout_constraintVertical_bias="0.0"
-        android:layout_marginTop="10dp"/>
+        app:layout_constraintEnd_toStartOf="@+id/splashscr_verticalright088"
+        app:layout_constraintStart_toStartOf="@+id/splashscr_verticalleft012"
+        app:layout_constraintTop_toBottomOf="@+id/appname_group" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/splashscr_horizontaltop002"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.02" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/splashscr_horizontalbottom098"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.98" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/splashscr_verticalleft012"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.12" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/splashscr_verticalright088"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.88" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/splashscr_horizontalcenter050"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/splashscr_verticalcenter050"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/splashscr_progressbarbottom080"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.8" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
