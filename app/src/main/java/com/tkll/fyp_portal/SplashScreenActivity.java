@@ -22,7 +22,7 @@ import java.util.TimerTask;
 
 public class SplashScreenActivity extends AppCompatActivity {
     // Variable declarations
-    private static int SPLASH_SCREEN = 5000;
+    private static int SPLASH_SCREEN_TOTAL_DURATION = 10000;
     ProgressBar progressBar;
     LottieAnimationView lottieAnimationView;
     TextView appName_FYP, appName_Portal;
@@ -65,9 +65,8 @@ public class SplashScreenActivity extends AppCompatActivity {
             Intent intent = new Intent(SplashScreenActivity.this, MainActivity.class);
             startActivity(intent);
             finish();
-        }, 10000);
+        }, SPLASH_SCREEN_TOTAL_DURATION);
     }
-
 
     public void progress(){
         final Timer t = new Timer();
@@ -81,7 +80,7 @@ public class SplashScreenActivity extends AppCompatActivity {
             }
         };
 
-        t.schedule(tt, 0, 30);
+        t.schedule(tt, 0, 80);
     }
 
     private void animateTextViewUpwards(TextView textView, int distance_to_move) {
