@@ -37,7 +37,7 @@
                     android:title="FYP Amendment Form"/>
                 <item android:id="@+id/fyp_reportsubmission"
                     android:icon="@drawable/ic_assignment"
-                    android:title="IIPSPW Report Submission"/>
+                    android:title="FYP Report Submission"/>
             </group>
         </menu>
     </item>

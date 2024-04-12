@@ -11,6 +11,13 @@ import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 
 import com.google.android.material.navigation.NavigationView;
+import com.tkll.fyp_portal.fragment.AmendmentForm_FYP;
+import com.tkll.fyp_portal.fragment.AmendmentForm_IIPSPW;
+import com.tkll.fyp_portal.fragment.FYP_UndertakingForm_IIPSPW;
+import com.tkll.fyp_portal.fragment.OfferedTitles_IIPSPW;
+import com.tkll.fyp_portal.fragment.ReportSubmission_FYP;
+import com.tkll.fyp_portal.fragment.StudentList_FYP;
+import com.tkll.fyp_portal.fragment.StudentList_IIPSPW;
 
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 

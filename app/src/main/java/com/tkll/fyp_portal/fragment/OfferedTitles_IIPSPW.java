@@ -1,4 +1,4 @@
-package com.tkll.fyp_portal;
+package com.tkll.fyp_portal.fragment;
 
 import android.os.Bundle;
 
@@ -8,13 +8,15 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-public class StudentList_IIPSPW extends Fragment {
+import com.tkll.fyp_portal.R;
+
+public class OfferedTitles_IIPSPW extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View rootView = inflater.inflate(R.layout.fragment_studentlist_iipspw, container, false);
+        View rootView = inflater.inflate(R.layout.fragment_offeredtitles_iipspw, container, false);
 
         return rootView;
     }
