@@ -48,9 +48,33 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new MainPage()).commit();
                 break;
 
-//            case R.id.nav_home:
-//                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new MainPage()).commit();
-//                break;
+            case R.id.iipspw_offeredtitles:
+                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new OfferedTitles_IIPSPW()).commit();
+                break;
+
+            case R.id.iipspw_undertakingform:
+                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new FYP_UndertakingForm_IIPSPW()).commit();
+                break;
+
+            case R.id.iipspw_stdlist:
+                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new StudentList_IIPSPW()).commit();
+                break;
+
+            case R.id.iipspw_amendmentform:
+                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new AmendmentForm_IIPSPW()).commit();
+                break;
+
+            case R.id.fyp_stdlist:
+                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new StudentList_FYP()).commit();
+                break;
+
+            case R.id.fyp_amendmentform:
+                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new AmendmentForm_FYP()).commit();
+                break;
+
+            case R.id.fyp_reportsubmission:
+                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new ReportSubmission_FYP()).commit();
+                break;
         }
 
         drawerLayout.closeDrawer(GravityCompat.START);

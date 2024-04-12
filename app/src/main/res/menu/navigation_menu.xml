@@ -3,19 +3,44 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:showIn="navigation_view">
 
-    <group android:checkableBehavior="single">
-        <item android:id="@+id/nav_home"
-            android:icon="@drawable/ic_notices"
-            android:title="Notices"/>
+    <item android:id="@+id/nav_home"
+        android:icon="@drawable/ic_notices"
+        android:title="Notices"/>
 
-        <item android:id="@+id/nav_iipspw"
-            android:icon="@drawable/ic_assignment"
-            android:title="IIPSPW"/>
+    <item android:title="IIPSPW">
+        <menu>
+            <group android:checkableBehavior="single">
+                <item android:id="@+id/iipspw_offeredtitles"
+                    android:icon="@drawable/ic_assignment"
+                    android:title="FYP Offered Titles"/>
+                <item android:id="@+id/iipspw_undertakingform"
+                    android:icon="@drawable/ic_assignment"
+                    android:title="FYP Undertaking Form"/>
+                <item android:id="@+id/iipspw_stdlist"
+                    android:icon="@drawable/ic_assignment"
+                    android:title="IIPSPW Student List"/>
+                <item android:id="@+id/iipspw_amendmentform"
+                    android:icon="@drawable/ic_assignment"
+                    android:title="IIPSPW Amendment Form"/>
+            </group>
+        </menu>
+    </item>
 
-        <item android:id="@+id/nav_fyp"
-            android:icon="@drawable/ic_assignment"
-            android:title="FYP"/>
-    </group>
+    <item android:title="Final Year Project (FYP)">
+        <menu>
+            <group android:checkableBehavior="single">
+                <item android:id="@+id/fyp_stdlist"
+                    android:icon="@drawable/ic_assignment"
+                    android:title="FYP Student List"/>
+                <item android:id="@+id/fyp_amendmentform"
+                    android:icon="@drawable/ic_assignment"
+                    android:title="FYP Amendment Form"/>
+                <item android:id="@+id/fyp_reportsubmission"
+                    android:icon="@drawable/ic_assignment"
+                    android:title="IIPSPW Report Submission"/>
+            </group>
+        </menu>
+    </item>
 
     <item android:title="Exit from app">
         <menu>
