@@ -62,7 +62,7 @@ public class SplashScreenActivity extends AppCompatActivity {
         }, 2000); // Delay for 2 seconds before starting animations
 
         new Handler().postDelayed(() -> {
-            Intent intent = new Intent(SplashScreenActivity.this, MainActivity.class);
+            Intent intent = new Intent(SplashScreenActivity.this, Login.class);
             startActivity(intent);
             finish();
         }, SPLASH_SCREEN_TOTAL_DURATION);

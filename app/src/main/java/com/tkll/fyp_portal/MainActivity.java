@@ -1,10 +1,13 @@
 package com.tkll.fyp_portal;
 
+import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.core.view.GravityCompat;
@@ -82,6 +85,10 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             case R.id.fyp_reportsubmission:
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new ReportSubmission_FYP()).commit();
                 break;
+
+            case R.id.nav_logout:
+                logout();
+                break;
         }
 
         drawerLayout.closeDrawer(GravityCompat.START);
@@ -93,5 +100,16 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         if(drawerLayout.isDrawerOpen(GravityCompat.START)){
             drawerLayout.closeDrawer(GravityCompat.START);
         } else super.onBackPressed();
+    }
+
+
+    private void logout() {
+        // Add code here to perform logout actions if any
+        // For example, clearing user session, resetting preferences, etc.
+
+        // Redirect to the Login activity
+        Intent intent = new Intent(this, Login.class);
+        startActivity(intent);
+        finish(); // Optional: Close the current activity to prevent going back to it using the back button
     }
 }
