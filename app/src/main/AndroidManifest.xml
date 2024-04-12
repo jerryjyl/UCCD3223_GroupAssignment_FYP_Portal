@@ -13,10 +13,7 @@
         android:theme="@style/Theme.FYP_Portal"
         tools:targetApi="31">
         <activity
-            android:name=".tiang"
-            android:exported="false" />
-        <activity
-            android:name=".MainActivity"
+            android:name=".SplashScreenActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -24,23 +21,12 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
-
-<!--     If want to use admin page can uncomment below(this line must comment    -->
-<!--            <activity-->
-<!--                android:name=".AddActivity"-->
-<!--                android:exported="false" />-->
-<!--            <activity-->
-<!--                android:name=".MainActivity2"-->
-<!--                android:exported="true">-->
-<!--                <intent-filter>-->
-<!--                    <action android:name="android.intent.action.MAIN" />-->
-
-<!--                    <category android:name="android.intent.category.LAUNCHER" />-->
-<!--                </intent-filter>-->
-<!--        </activity>-->
-
-    <!--   the application cannot be comment     -->
+        <activity
+            android:name=".tiang"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="false"/>
     </application>
 
 </manifest>

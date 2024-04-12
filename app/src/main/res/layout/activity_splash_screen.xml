@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/constraintLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/header_bg"
+    android:gravity="center"
+    android:padding="20dp"
+    tools:context=".SplashScreenActivity">
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/lottie"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/animation"
+        tools:layout_editor_absoluteX="20dp"
+        tools:layout_editor_absoluteY="57dp" />
+
+    <TextView
+        android:id="@+id/appname_fyp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:autoSizeTextType="uniform"
+        android:fontFamily="@font/paul"
+        android:gravity="center"
+        android:text="FYP"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.492"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="399dp" />
+
+    <TextView
+        android:id="@+id/appname_portal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/cabal_bold"
+        android:text="Portal"
+        android:textColor="@color/white"
+        android:textSize="50sp"
+        tools:layout_editor_absoluteX="132dp"
+        tools:layout_editor_absoluteY="601dp" />
+
+    <ProgressBar
+        android:id="@+id/progressbar"
+        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+        android:layout_width="270dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:progressDrawable="@drawable/progressbar"
+        android:scaleY="1"
+        android:theme="@style/ProgressBarStyle"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.514"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/appname"
+        app:layout_constraintVertical_bias="0.0" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
