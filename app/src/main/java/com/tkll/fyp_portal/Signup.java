@@ -10,12 +10,19 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.FirebaseDatabase;
+
+import java.util.HashMap;
+import java.util.Map;
+
 public class Signup extends AppCompatActivity {
     private FirebaseAuth auth;
-    private EditText signupEmail, signupPassword;
+    private EditText signupEmail, signupPassword, signupUsername;
     private Button signupButton;
     private TextView loginRedirectText;
     @Override
@@ -25,6 +32,7 @@ public class Signup extends AppCompatActivity {
         auth = FirebaseAuth.getInstance();
         signupEmail = findViewById(R.id.signup_email);
         signupPassword = findViewById(R.id.signup_password);
+        signupUsername = findViewById(R.id.signup_username);
         signupButton = findViewById(R.id.signup_button);
         loginRedirectText = findViewById(R.id.loginRedirectText);
         signupButton.setOnClickListener(new View.OnClickListener() {
@@ -32,6 +40,7 @@ public class Signup extends AppCompatActivity {
             public void onClick(View view) {
                 String user = signupEmail.getText().toString().trim();
                 String pass = signupPassword.getText().toString().trim();
+                String username = signupUsername.getText().toString().trim();
                 if (user.isEmpty()){
                     signupEmail.setError("Email cannot be empty");
                 }
@@ -50,6 +59,27 @@ public class Signup extends AppCompatActivity {
                         }
                     });
                 }
+
+                Map<String,Object> map=new HashMap<>();
+                map.put("Username",signupUsername.getText().toString());
+                map.put("Email",signupEmail.getText().toString());
+                FirebaseDatabase.getInstance().getReference().child("Users").push()
+                        .setValue(map)
+                        .addOnSuccessListener(new OnSuccessListener<Void>() {
+                            @Override
+                            public void onSuccess(Void unused) {
+                                Toast.makeText(Signup.this,"Data Inserted Successfully.",Toast.LENGTH_SHORT).show();
+                            }
+                        })
+                        .addOnFailureListener(new OnFailureListener() {
+                            @Override
+                            public void onFailure(@NonNull Exception e) {
+                                Toast.makeText(Signup.this,"Error While Insertion.",Toast.LENGTH_SHORT).show();
+                            }
+                        });
+
+
+
             }
         });
         loginRedirectText.setOnClickListener(new View.OnClickListener() {
