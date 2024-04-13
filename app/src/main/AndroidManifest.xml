@@ -19,7 +19,28 @@
             android:name=".Login"
             android:exported="false" />
         <activity
-            android:name=".SplashScreenActivity"
+            android:name=".MainActivity2"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity3"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity4"
+            android:exported="false" />
+        <activity
+            android:name=".AddActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".AddActivity2"
+            android:exported="false" />
+
+        <activity
+            android:name=".AddActivity3"
+            android:exported="false" />
+
+        <activity
+            android:name=".MainActivityAdmin"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
