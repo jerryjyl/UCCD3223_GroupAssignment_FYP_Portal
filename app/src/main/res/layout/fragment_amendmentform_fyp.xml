@@ -1,42 +1,23 @@
-<?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.tkll.fyp_portal.fragment.AmendmentForm_FYP">
+    android:orientation="vertical">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        xmlns:tools="http://schemas.android.com/tools"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="#e7dfff">
+    <!-- Message -->
+    <TextView
+        android:id="@+id/messageTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="The form is disabled due to exceed the deadline[2024-03-15 17:00:00]. Please download the softcopy below and submit it to your supervisor VIA e-mail."
+        android:textSize="16sp"
+        android:padding="16dp"/>
 
-        <ScrollView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
+    <!-- Download Form Button -->
+    <Button
+        android:id="@+id/downloadFormButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Download Form"
+        android:onClick="downloadForm"/>
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:layout_gravity="center">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="FYP Amendment Form in FYP tab"
-                    android:textSize="30sp"
-                    android:textStyle="bold"
-                    android:textAlignment="center"/>
-
-            </LinearLayout>
-        </ScrollView>
-    </androidx.constraintlayout.widget.ConstraintLayout>
-
-</FrameLayout>
+</LinearLayout>
