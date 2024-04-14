@@ -34,9 +34,7 @@
                         <category android:name="android.intent.category.DEFAULT" />
                     </intent-filter>
                 </activity>
-                <activity
-                    android:name=".tiang"
-                    android:exported="false" />
+
                 <activity
                     android:name=".MainActivity"
                     android:exported="false" />
