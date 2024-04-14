@@ -43,8 +43,24 @@
             android:name=".AddActivity3"
             android:exported="false" />
 
+<!--        <activity-->
+<!--            android:name=".MainActivityAdmin"-->
+<!--            android:exported="true">-->
+<!--            <intent-filter>-->
+<!--                <action android:name="android.intent.action.MAIN" />-->
+<!--                <category android:name="android.intent.category.LAUNCHER" />-->
+<!--            </intent-filter>-->
+<!--            <intent-filter>-->
+<!--                <action android:name="android.intent.action.MAIN" />-->
+<!--                <category android:name="android.intent.category.DEFAULT" />-->
+<!--            </intent-filter>-->
+<!--        </activity>-->
         <activity
-            android:name=".MainActivityAdmin"
+            android:name=".tiang"
+            android:exported="false" />
+
+        <activity
+            android:name=".SplashScreenActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -56,26 +72,9 @@
             </intent-filter>
         </activity>
 
-<!--        <activity-->
-<!--            android:name=".SplashScreenActivity"-->
-<!--            android:exported="true">-->
-<!--            <intent-filter>-->
-<!--                <action android:name="android.intent.action.MAIN" />-->
-<!--                <category android:name="android.intent.category.LAUNCHER" />-->
-<!--            </intent-filter>-->
-<!--            <intent-filter>-->
-<!--                <action android:name="android.intent.action.MAIN" />-->
-<!--                <category android:name="android.intent.category.DEFAULT" />-->
-<!--            </intent-filter>-->
-<!--        </activity>-->
 
 
-        <activity
-            android:name=".tiang"
-            android:exported="false" />
-        <activity
-            android:name=".MainActivity"
-            android:exported="false" />
+
     </application>
 
 </manifest>
