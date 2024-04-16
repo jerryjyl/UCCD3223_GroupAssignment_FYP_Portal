@@ -67,7 +67,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 break;
 
             case R.id.iipspw_stdlist:
-                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new StudentList_IIPSPW()).commit();
+                Intent intent = new Intent(MainActivity.this, MainActivityIIPSPWStudentList.class);
+                startActivity(intent);
                 break;
 
             case R.id.iipspw_amendmentform:
@@ -75,7 +76,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 break;
 
             case R.id.fyp_stdlist:
-                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new StudentList_FYP()).commit();
+                intent = new Intent(MainActivity.this, MainActivityFypStudentList.class);
+                startActivity(intent);
                 break;
 
             case R.id.fyp_amendmentform:
