@@ -59,7 +59,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 break;
 
             case R.id.iipspw_offeredtitles:
-                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new OfferedTitles_IIPSPW()).commit();
+                Intent intent = new Intent(MainActivity.this, MainActivityOfferedTitles.class);
+                startActivity(intent);
                 break;
 
             case R.id.iipspw_undertakingform:
@@ -67,7 +68,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 break;
 
             case R.id.iipspw_stdlist:
-                Intent intent = new Intent(MainActivity.this, MainActivityIIPSPWStudentList.class);
+                intent = new Intent(MainActivity.this, MainActivityIIPSPWStudentList.class);
                 startActivity(intent);
                 break;
 

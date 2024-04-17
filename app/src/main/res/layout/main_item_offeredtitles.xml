@@ -19,11 +19,11 @@
             android:orientation="horizontal">
 
             <TextView
-                android:id="@+id/StudentText"
+                android:id="@+id/SupervisorText"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="8dp"
-                android:text="Student Name"
+                android:text="Supervisor Name"
                 android:textColor="#000"
                 android:textSize="25sp"
                 android:textStyle="bold" />
@@ -50,7 +50,7 @@
                 android:text="Project Title"
                 android:textColor="#000"
                 android:textSize="18sp"
-                android:textStyle="bold"/>
+                android:textStyle="bold" />
         </LinearLayout>
 
         <LinearLayout
@@ -62,19 +62,19 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Supervisor Name:"
+                android:text="Description:"
                 android:textColor="#000"
                 android:textSize="18sp" />
 
             <TextView
-                android:id="@+id/SupervisorText"
+                android:id="@+id/DescriptionText"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="8dp"
-                android:text="Supervisor Name"
+                android:text="Description"
                 android:textColor="#000"
                 android:textSize="18sp"
-                android:textStyle="bold"/>
+                android:textStyle="bold" />
         </LinearLayout>
 
         <LinearLayout
@@ -86,19 +86,19 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Project Type:"
+                android:text="Expected Outcome:"
                 android:textColor="#000"
                 android:textSize="18sp" />
 
             <TextView
-                android:id="@+id/ProjectTypeText"
+                android:id="@+id/ExpectedOutcomeText"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="8dp"
-                android:text="Project Type"
+                android:text="Expected Outcome:"
                 android:textColor="#000"
                 android:textSize="18sp"
-                android:textStyle="bold"/>
+                android:textStyle="bold" />
         </LinearLayout>
 
         <LinearLayout
@@ -122,7 +122,7 @@
                 android:text="Area of Study"
                 android:textColor="#000"
                 android:textSize="18sp"
-                android:textStyle="bold"/>
+                android:textStyle="bold" />
         </LinearLayout>
 
 
@@ -135,19 +135,19 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Programme:"
+                android:text="Skill Required:"
                 android:textColor="#000"
                 android:textSize="18sp" />
 
             <TextView
-                android:id="@+id/ProgrammeText"
+                android:id="@+id/SkillRequiredText"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="8dp"
-                android:text="Programme"
+                android:text="Skill Required"
                 android:textColor="#000"
                 android:textSize="18sp"
-                android:textStyle="bold"/>
+                android:textStyle="bold" />
         </LinearLayout>
 
 
@@ -160,22 +160,68 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Moderator Name:"
+                android:text="No. of Student:"
                 android:textColor="#000"
                 android:textSize="18sp" />
 
             <TextView
-                android:id="@+id/ModeratorNameText"
+                android:id="@+id/NoOfStudentText"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="8dp"
-                android:text="Moderator Name"
+                android:text="No. of Student"
                 android:textColor="#000"
                 android:textSize="18sp"
-                android:textStyle="bold"/>
+                android:textStyle="bold" />
         </LinearLayout>
 
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:orientation="horizontal">
 
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Equipment:"
+                android:textColor="#000"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/EquipmentText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:text="Equipment"
+                android:textColor="#000"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Suitable for student in:"
+                android:textColor="#000"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/SuitableForText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:text="Suitable for"
+                android:textColor="#000"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+        </LinearLayout>
 
 
 
