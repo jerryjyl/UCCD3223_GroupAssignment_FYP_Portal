@@ -3,6 +3,7 @@ package com.tkll.fyp_portal.fragment;
 import android.Manifest;
 import android.app.DownloadManager;
 import android.content.Context;
+import android.content.res.AssetManager;
 import android.net.Uri;
 import android.os.Bundle;
 
@@ -22,6 +23,12 @@ import android.widget.Toast;
 import android.content.pm.PackageManager;
 
 import com.tkll.fyp_portal.R;
+
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.OutputStream;
 
 public class AmendmentForm_FYP extends Fragment {
 
@@ -77,29 +84,38 @@ public class AmendmentForm_FYP extends Fragment {
 
     // Method to start the download process
     private void startDownload() {
-        // URL of the file to download
-        String fileUrl = "https://www2.utar.edu.my/fict-pk/file/FYP%20Amendment%20Request%20Form%20(FYP1%20FYP2%20only).docx";
+        // Get the AssetManager
+        AssetManager assetManager = getActivity().getAssets();
 
-        // Get the DownloadManager service
-        DownloadManager downloadManager = (DownloadManager) getActivity().getSystemService(Context.DOWNLOAD_SERVICE);
+        try {
+            // Open the input stream for the asset file
+            InputStream inputStream = assetManager.open("amendmentform.docx");
 
-        // Parse the file URL
-        Uri uri = Uri.parse(fileUrl);
+            // Set the destination directory for the downloaded file (Downloads directory)
+            File downloadsDir = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS);
+            String destinationPath = downloadsDir.getAbsolutePath() + File.separator + "amendmentform.docx";
 
-        // Create a DownloadManager.Request with the file URL
-        DownloadManager.Request request = new DownloadManager.Request(uri);
+            // Create the output stream to write the file
+            OutputStream outputStream = new FileOutputStream(destinationPath);
 
-        // Set the title of the download notification
-        request.setTitle("Amendment Form Download");
+            // Copy the file from the input stream to the output stream
+            byte[] buffer = new byte[1024];
+            int length;
+            while ((length = inputStream.read(buffer)) > 0) {
+                outputStream.write(buffer, 0, length);
+            }
 
-        // Set the destination directory for the downloaded file
-        request.setDestinationInExternalPublicDir(Environment.DIRECTORY_DOWNLOADS, "FYP_Amendment_Form.docx");
+            // Close the streams
+            outputStream.flush();
+            outputStream.close();
+            inputStream.close();
 
-        // Enqueue the download and get the download ID
-        long downloadId = downloadManager.enqueue(request);
-
-        // Optionally, you can listen for download completion or failure
-        // For example:
-        // new DownloadCompleteReceiver().setOnDownloadCompleteListener(downloadId, getActivity());
+            // Show a message indicating successful download
+            Toast.makeText(getActivity(), "File downloaded successfully", Toast.LENGTH_SHORT).show();
+        } catch (IOException e) {
+            e.printStackTrace();
+            // Show a message indicating failure
+            Toast.makeText(getActivity(), "Failed to download the file", Toast.LENGTH_SHORT).show();
+        }
     }
 }
