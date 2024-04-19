@@ -59,6 +59,10 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new MainPage()).commit();
                 break;
 
+            case R.id.compose_email:
+                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new SendMailActivity()).commit();
+                break;
+
             case R.id.iipspw_offeredtitles:
                 Intent intent = new Intent(MainActivity.this, MainActivityOfferedTitles.class);
                 startActivity(intent);

@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/recipientmail_layout">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.25"
+                android:text="Mail To: "
+                android:autoSizeTextType="uniform"
+                android:autoSizeMinTextSize="12dp"
+                android:paddingHorizontal="8dp"
+                android:gravity="center"/>
+
+            <EditText
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.75"
+                android:id="@+id/toMail"
+                android:hint="Recipient's Email"
+                android:layout_marginLeft="10dp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/mailsubject_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/recipientmail_layout">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.25"
+                android:text="Subject: "
+                android:autoSizeTextType="uniform"
+                android:autoSizeMinTextSize="12dp"
+                android:paddingHorizontal="8dp"
+                android:gravity="center"/>
+
+            <EditText
+                android:id="@+id/emailSubject"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.75"
+                android:hint="Mail's Subject"
+                android:layout_marginLeft="10dp"/>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/mailcontent_layout"
+            android:orientation="vertical"
+            android:layout_below="@id/mailsubject_layout">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/contentTv">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.25"
+                    android:text="Content: "
+                    android:autoSizeTextType="uniform"
+                    android:autoSizeMinTextSize="12dp"
+                    android:paddingHorizontal="8dp"
+                    android:gravity="center"/>
+                <EditText
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.75"
+                    android:layout_marginLeft="10dp"
+                    android:enabled="false"
+                    android:visibility="invisible"/>
+            </LinearLayout>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_weight="0.75"
+                android:id="@+id/emailContent"
+                android:hint="Write something here ..."
+                android:paddingBottom="150dp"
+                android:paddingLeft="10dp"
+                android:background="@null"
+                android:layout_below="@id/contentTv" />
+        </LinearLayout>
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/round_button_background"
+            android:src="@drawable/ic_email_white"
+            android:padding="16dp"
+            android:id="@+id/sendMail"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"/>
+
+    </RelativeLayout>
+</FrameLayout>

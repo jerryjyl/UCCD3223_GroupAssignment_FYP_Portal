@@ -7,6 +7,10 @@
         android:icon="@drawable/ic_notices"
         android:title="Notices"/>
 
+    <item android:id="@+id/compose_email"
+        android:icon="@drawable/ic_notices"
+        android:title="Compose e-mail"/>
+
     <item android:title="IIPSPW">
         <menu>
             <group android:checkableBehavior="single">
