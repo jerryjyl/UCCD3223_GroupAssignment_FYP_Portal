@@ -37,6 +37,16 @@ public class Login extends AppCompatActivity {
             public void onClick(View v) {
                 String email = loginEmail.getText().toString();
                 String pass = loginPassword.getText().toString();
+
+                // Check if it's the admin login
+                if (email.equals("adminfypportal@1utar.my") && pass.equals("admin123")) {
+                    // Start MainActivityAdmin
+                    startActivity(new Intent(Login.this, MainActivityAdmin.class));
+                    finish();
+                    return; // Exit the method, avoiding further execution
+                }
+
+
                 if (!email.isEmpty() && Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
                     if (!pass.isEmpty()) {
                         auth.signInWithEmailAndPassword(email, pass)

@@ -9,7 +9,7 @@
         android:id="@+id/offeredTitleButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Offered Title"
+        android:text="Modify Offered Title"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="50dp"/>
 
@@ -17,7 +17,7 @@
         android:id="@+id/iipspwStudentListButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="IIPSPW Student List"
+        android:text="Modify IIPSPW Student List"
         android:layout_below="@id/offeredTitleButton"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="20dp"/>
@@ -26,7 +26,7 @@
         android:id="@+id/fypStudentListButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="FYP Student List"
+        android:text="Modify FYP Student List"
         android:layout_below="@id/iipspwStudentListButton"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="20dp"/>
