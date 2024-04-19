@@ -1,9 +1,16 @@
 package com.tkll.fyp_portal;
 
+import android.app.Dialog;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
+import android.view.Gravity;
 import android.view.MenuItem;
+import android.view.ViewGroup;
+import android.view.Window;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
@@ -60,7 +67,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 break;
 
             case R.id.compose_email:
-                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new SendMailActivity()).commit();
+                SendMailActivity sendMailActivity = new SendMailActivity();
+                sendMailActivity.show(getSupportFragmentManager(), "SendMailBottomSheet");
                 break;
 
             case R.id.iipspw_offeredtitles:
@@ -110,7 +118,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         } else super.onBackPressed();
     }
 
-
     private void logout() {
         // Add code here to perform logout actions if any
         // For example, clearing user session, resetting preferences, etc.
@@ -118,6 +125,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         // Redirect to the Login activity
         Intent intent = new Intent(this, Login.class);
         startActivity(intent);
+        Toast.makeText(getApplicationContext(), "Logged out successfully", Toast.LENGTH_SHORT).show();
         finish(); // Optional: Close the current activity to prevent going back to it using the back button
     }
+
 }

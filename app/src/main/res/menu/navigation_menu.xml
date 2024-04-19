@@ -8,7 +8,7 @@
         android:title="Notices"/>
 
     <item android:id="@+id/compose_email"
-        android:icon="@drawable/ic_notices"
+        android:icon="@drawable/ic_email_navy"
         android:title="Compose e-mail"/>
 
     <item android:title="IIPSPW">

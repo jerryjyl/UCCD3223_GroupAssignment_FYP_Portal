@@ -12,7 +12,9 @@ import android.widget.ImageButton;
 import android.widget.Toast;
 import androidx.fragment.app.Fragment;
 
-public class SendMailActivity extends Fragment {
+import com.google.android.material.bottomsheet.BottomSheetDialogFragment;
+
+public class SendMailActivity extends BottomSheetDialogFragment {
     EditText editTxtSubject, editTxtContent, editTxtRecipientMail;
     ImageButton sendMail;
 
@@ -42,6 +44,7 @@ public class SendMailActivity extends Fragment {
                             Toast.LENGTH_SHORT).show();
                 } else {
                     sendEmail(getContext(), subject, content, recipient_address);
+                    dismiss();
                 }
             }
 
