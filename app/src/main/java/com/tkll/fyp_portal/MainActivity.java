@@ -1,20 +1,12 @@
 package com.tkll.fyp_portal;
 
-import android.app.Dialog;
-import android.content.DialogInterface;
 import android.content.Intent;
-import android.graphics.Color;
-import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
-import android.view.Gravity;
 import android.view.MenuItem;
-import android.view.ViewGroup;
-import android.view.Window;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
-import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.core.view.GravityCompat;
@@ -24,10 +16,6 @@ import com.google.android.material.navigation.NavigationView;
 import com.tkll.fyp_portal.fragment.AmendmentForm_FYP;
 import com.tkll.fyp_portal.fragment.AmendmentForm_IIPSPW;
 import com.tkll.fyp_portal.fragment.FYP_UndertakingForm_IIPSPW;
-import com.tkll.fyp_portal.fragment.OfferedTitles_IIPSPW;
-import com.tkll.fyp_portal.fragment.ReportSubmission_FYP;
-import com.tkll.fyp_portal.fragment.StudentList_FYP;
-import com.tkll.fyp_portal.fragment.StudentList_IIPSPW;
 
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
@@ -99,7 +87,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 break;
 
             case R.id.fyp_reportsubmission:
-                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new ReportSubmission_FYP()).commit();
+                intent = new Intent(MainActivity.this, ReportSubmission_Fyp.class);
+                startActivity(intent);
                 break;
 
             case R.id.nav_logout:
