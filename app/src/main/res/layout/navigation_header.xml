@@ -23,20 +23,13 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:text="Your Username"
+            android:text="Welcome!"
             android:autoSizeTextType="uniform"
             android:textStyle="bold"
             android:layout_weight="1"
             android:gravity="center_horizontal"/>
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:text="youremail@email.com"
-            android:autoSizeTextType="uniform"
-            android:textStyle="italic"
-            android:layout_weight="0.4"
-            android:gravity="center_horizontal"/>
+
     </LinearLayout>
 
 </LinearLayout>
