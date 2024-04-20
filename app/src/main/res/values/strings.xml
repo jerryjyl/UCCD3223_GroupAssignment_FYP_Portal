@@ -11,4 +11,6 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="open_navigation">Enable navigation</string>
     <string name="close_navigation">Disable navigation</string>
+    <string name="form_disabled">The form is disabled due to exceed the deadline [ 2024-03-15 17:00:00 ].
+        Please download the soft copy below and submit it to your supervisor VIA e-mail.</string>
 </resources>

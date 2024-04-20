@@ -3,181 +3,186 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    app:cardCornerRadius="6dp"
+    app:cardCornerRadius="20dp"
     android:elevation="6dp"
     app:cardUseCompatPadding="true">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:padding="15dp">
 
         <LinearLayout
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
             android:orientation="horizontal">
 
             <TextView
                 android:id="@+id/StudentText"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="8dp"
                 android:text="Student Name"
                 android:textColor="#000"
-                android:textSize="25sp"
+                android:textSize="30sp"
                 android:textStyle="bold" />
         </LinearLayout>
 
         <LinearLayout
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
             android:orientation="horizontal">
 
             <TextView
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:layout_weight="0.35"
                 android:text="Project title:"
                 android:textColor="#000"
                 android:textSize="18sp" />
 
             <TextView
                 android:id="@+id/ProjectTitleText"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:layout_weight="0.65"
                 android:layout_marginLeft="8dp"
                 android:text="Project Title"
                 android:textColor="#000"
                 android:textSize="18sp"
-                android:textStyle="bold"/>
+                android:textStyle="italic" />
         </LinearLayout>
 
         <LinearLayout
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
             android:orientation="horizontal">
 
             <TextView
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:layout_weight="0.35"
                 android:text="Supervisor Name:"
                 android:textColor="#000"
                 android:textSize="18sp" />
 
             <TextView
                 android:id="@+id/SupervisorText"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:layout_weight="0.65"
                 android:layout_marginLeft="8dp"
                 android:text="Supervisor Name"
                 android:textColor="#000"
                 android:textSize="18sp"
-                android:textStyle="bold"/>
+                android:textStyle="italic" />
         </LinearLayout>
 
         <LinearLayout
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
             android:orientation="horizontal">
 
             <TextView
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:layout_weight="0.35"
                 android:text="Project Type:"
                 android:textColor="#000"
                 android:textSize="18sp" />
 
             <TextView
                 android:id="@+id/ProjectTypeText"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:layout_weight="0.65"
                 android:layout_marginLeft="8dp"
                 android:text="Project Type"
                 android:textColor="#000"
                 android:textSize="18sp"
-                android:textStyle="bold"/>
+                android:textStyle="italic" />
         </LinearLayout>
 
         <LinearLayout
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
             android:orientation="horizontal">
 
             <TextView
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:layout_weight="0.35"
                 android:text="Area of Study:"
                 android:textColor="#000"
                 android:textSize="18sp" />
 
             <TextView
                 android:id="@+id/AreaOfStudyText"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:layout_weight="0.65"
                 android:layout_marginLeft="8dp"
                 android:text="Area of Study"
                 android:textColor="#000"
                 android:textSize="18sp"
-                android:textStyle="bold"/>
+                android:textStyle="italic" />
         </LinearLayout>
 
-
         <LinearLayout
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
             android:orientation="horizontal">
 
             <TextView
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:layout_weight="0.35"
                 android:text="Programme:"
                 android:textColor="#000"
                 android:textSize="18sp" />
 
             <TextView
                 android:id="@+id/ProgrammeText"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:layout_weight="0.65"
                 android:layout_marginLeft="8dp"
                 android:text="Programme"
                 android:textColor="#000"
                 android:textSize="18sp"
-                android:textStyle="bold"/>
+                android:textStyle="italic" />
         </LinearLayout>
 
-
         <LinearLayout
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
             android:orientation="horizontal">
 
             <TextView
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:layout_weight="0.35"
                 android:text="Moderator Name:"
                 android:textColor="#000"
                 android:textSize="18sp" />
 
             <TextView
                 android:id="@+id/ModeratorNameText"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:layout_weight="0.65"
                 android:layout_marginLeft="8dp"
                 android:text="Moderator Name"
                 android:textColor="#000"
                 android:textSize="18sp"
-                android:textStyle="bold"/>
+                android:textStyle="italic" />
         </LinearLayout>
-
-
-
-
-
     </LinearLayout>
 </androidx.cardview.widget.CardView>

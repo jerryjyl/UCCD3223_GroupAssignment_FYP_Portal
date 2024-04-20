@@ -3,21 +3,45 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <!-- Message -->
+    <LinearLayout
+        android:id="@+id/iipspw_undertakingform_pagetitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="12dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/background_2"
+        android:orientation="vertical"
+        android:paddingVertical="10dp"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginHorizontal="15dp"
+            android:text="FINAL YEAR PROJECT (FYP) Undertaking Form"
+            android:textColor="#1e4368"
+            android:textSize="25sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
     <TextView
         android:id="@+id/messageTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="The form is disabled due to exceed the deadline[2024-03-15 17:00:00]. Please download the softcopy below and submit it to your supervisor VIA e-mail."
+        android:text="@string/form_disabled"
         android:textSize="16sp"
-        android:padding="16dp"/>
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginVertical="15dp"
+        android:justificationMode="inter_word"/>
 
-    <!-- Download Form Button -->
     <Button
         android:id="@+id/downloadFormButton"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Download Form"
-        android:onClick="downloadForm"/>
+        android:text="DOWNLOAD FYP UNDERTAKING FORM"
+        android:onClick="downloadForm"
+        android:layout_marginHorizontal="20dp"/>
 
 </LinearLayout>

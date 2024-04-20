@@ -16,6 +16,10 @@ import com.google.android.material.navigation.NavigationView;
 import com.tkll.fyp_portal.fragment.AmendmentForm_FYP;
 import com.tkll.fyp_portal.fragment.AmendmentForm_IIPSPW;
 import com.tkll.fyp_portal.fragment.FYP_UndertakingForm_IIPSPW;
+import com.tkll.fyp_portal.fragment.OfferedTitles_IIPSPW;
+import com.tkll.fyp_portal.fragment.ReportSubmission_Fyp;
+import com.tkll.fyp_portal.fragment.StudentList_FYP;
+import com.tkll.fyp_portal.fragment.StudentList_IIPSPW;
 
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
@@ -49,6 +53,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
 
+        Intent intent;
+
         switch(menuItem.getItemId()) {
             case R.id.nav_home:
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new MainPage()).commit();
@@ -60,8 +66,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 break;
 
             case R.id.iipspw_offeredtitles:
-                Intent intent = new Intent(MainActivity.this, MainActivityOfferedTitles.class);
-                startActivity(intent);
+                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new OfferedTitles_IIPSPW()).commit();
                 break;
 
             case R.id.iipspw_undertakingform:
@@ -69,8 +74,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 break;
 
             case R.id.iipspw_stdlist:
-                intent = new Intent(MainActivity.this, MainActivityIIPSPWStudentList.class);
-                startActivity(intent);
+                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new StudentList_IIPSPW()).commit();
                 break;
 
             case R.id.iipspw_amendmentform:
@@ -78,8 +82,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 break;
 
             case R.id.fyp_stdlist:
-                intent = new Intent(MainActivity.this, MainActivityFypStudentList.class);
-                startActivity(intent);
+                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new StudentList_FYP()).commit();
                 break;
 
             case R.id.fyp_amendmentform:
@@ -87,8 +90,9 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 break;
 
             case R.id.fyp_reportsubmission:
-                intent = new Intent(MainActivity.this, ReportSubmission_Fyp.class);
-                startActivity(intent);
+//                intent = new Intent(MainActivity.this, ReportSubmission_Fyp.class);
+//                startActivity(intent);
+                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new ReportSubmission_Fyp()).commit();
                 break;
 
             case R.id.nav_logout:

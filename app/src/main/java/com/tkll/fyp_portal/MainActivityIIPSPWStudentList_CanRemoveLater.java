@@ -14,7 +14,7 @@ import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
 
-public class MainActivityIIPSPWStudentList extends AppCompatActivity {
+public class MainActivityIIPSPWStudentList_CanRemoveLater extends AppCompatActivity {
 
     RecyclerView recyclerView;
     DatabaseReference database;
@@ -26,7 +26,7 @@ public class MainActivityIIPSPWStudentList extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.fragment_studentlist_fyp);
+        setContentView(R.layout.fragment_studentlist_iipspw);
 
         recyclerView= findViewById(R.id.rv);
         database=FirebaseDatabase.getInstance().getReference("IIPSPW Student List");
